@@ -11,6 +11,7 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  * This class is a simple application that writes a random number on a file.
@@ -39,7 +40,11 @@ public class MiniGUI {
         canvas.add(newPanel,BorderLayout.CENTER);
         final JButton write = new JButton("click to show a random number on the terminal");
         newPanel.add(write);
-        /*End part 1 */
+        /*End Part 1 */
+        /*Part 2 */
+        final JTextField result = new JTextField("Result:");
+        canvas.add(result,BorderLayout.NORTH);
+        /*End Part 2 */
         frame.setContentPane(canvas);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         /*
@@ -48,9 +53,12 @@ public class MiniGUI {
         write.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(final ActionEvent e) {
-                IO.println(randomGenerator.nextInt());
+                String text = "" + randomGenerator.nextInt();
+                IO.println(text);
+                result.setText(text);
             }
         });
+
     }
 
     private void display() {
