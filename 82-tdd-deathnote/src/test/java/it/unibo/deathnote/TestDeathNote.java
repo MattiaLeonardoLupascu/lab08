@@ -62,6 +62,7 @@ class TestDeathNote {
         assertThrows(IllegalStateException.class, () -> deathNote.writeDetails("fell on knife"));
         deathNote.writeName(DANILO_PIANINI);
         assertEquals("", deathNote.getDeathDetails(DANILO_PIANINI));
+        assertTrue(deathNote.writeDeathCause("Exaustion"));
         assertTrue(deathNote.writeDetails("ran for too long"));
         assertEquals("ran for too long", deathNote.getDeathDetails(DANILO_PIANINI));
         deathNote.writeName(MIRKO_VIROLI);
@@ -69,6 +70,7 @@ class TestDeathNote {
             Thread.sleep(6100);
         } catch (InterruptedException e) {
         }
-        /* TODO: try to change the details verify that the details have not been changed*/
+        assertFalse(deathNote.writeDetails("ran over by a truck"));
+        assertNotEquals("ran over by a truck",deathNote.getDeathDetails(MIRKO_VIROLI));
     }
 }

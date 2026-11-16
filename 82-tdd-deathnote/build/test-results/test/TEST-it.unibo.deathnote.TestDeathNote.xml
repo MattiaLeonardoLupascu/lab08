@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unibo.deathnote.TestDeathNote" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-16T16:15:32.583Z" hostname="MEOWTTI" time="6.311">
+  <properties/>
+  <testcase name="testNonExistingRules()" classname="it.unibo.deathnote.TestDeathNote" time="0.05"/>
+  <testcase name="testNoRuleNullOrEmpty()" classname="it.unibo.deathnote.TestDeathNote" time="0.006"/>
+  <testcase name="testKillingHumans()" classname="it.unibo.deathnote.TestDeathNote" time="0.11"/>
+  <testcase name="testFunctioningWriting()" classname="it.unibo.deathnote.TestDeathNote" time="0.003"/>
+  <testcase name="testDescription()" classname="it.unibo.deathnote.TestDeathNote" time="6.103"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
